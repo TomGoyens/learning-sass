@@ -42,7 +42,6 @@
 
 .button-animated-up-arrow{
   @extend %button;
-  width: 100px;
   a{
     position:relative;
     transition: all 0.5s;
