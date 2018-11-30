@@ -1,0 +1,69 @@
+%button{
+  text-align: center;
+  display: inline-block;
+  border:2px solid gold;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
+  &:hover{
+    box-shadow:1px 1px 1px black;
+    cursor: pointer;
+  }
+}
+
+.button-animated-right-arrow{
+  @extend %button;
+  width: 100px;
+  a{
+    position:relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    right:-4px;
+    &::after{
+      position: relative;
+      content:'\00bb';
+      opacity: 0;
+      right:5px;
+      transition: 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+  }
+  &:hover{
+    a{
+      padding-right: 10px;
+      &::after{
+        opacity: 1;
+        right: -3px;
+      }
+    }
+  }
+}
+
+.button-animated-up-arrow{
+  @extend %button;
+  width: 100px;
+  a{
+    position:relative;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    right:-5px;
+    &::after{
+      position: relative;
+      content:'\FE3D';
+      opacity: 0;
+      bottom: 1px;
+      transition: 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+  }
+  &:hover{
+    a{
+      padding-right: 10px;
+      &::after{
+        opacity: 1;
+        bottom:.5em;
+      }
+    }
+  }
+}
